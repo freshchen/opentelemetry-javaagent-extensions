@@ -5,7 +5,7 @@ import io.opentelemetry.sdk.autoconfigure.spi.AutoConfigurationCustomizer;
 import io.opentelemetry.sdk.autoconfigure.spi.AutoConfigurationCustomizerProvider;
 
 /**
- * @author lingchen02
+ * @author freshchen
  * @since 2023/3/22
  */
 @AutoService(AutoConfigurationCustomizerProvider.class)

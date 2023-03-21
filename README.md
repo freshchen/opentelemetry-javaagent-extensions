@@ -25,20 +25,21 @@ java -javaagent:/opentelemetry-javaagent.jar \
      -jar app.jar
 ```
 
-## 怎样进一步扩展
+## 怎样进一步扩展（欢迎贡献）
 
-otel-javaagent-extensions 目录
+**otel-javaagent-extensions 目录**
 
 目录下为扩展的核心代码，为了减少学习成本，没有和官方案例一样使用 gradle 而是使用了 maven，
-对扩展所需的依赖以及进行了管理，可以按需再代码基础上进行改造，执行 `mvn clean package` 即可打包出扩展包
+对扩展所需的依赖以及进行了管理，大家可以 `git clone` 下来按需进行改造，执行 `mvn clean package` 即可打包出扩展包
 
-test 目录
+**test 目录**
 
 目录下为一些测试案例
 
 ## 定制化功能
 
-### 1 web 响应头 - 返回 trace id 以及指定标签
+### 1 扩展 web 响应头添加 trace id 以及跨度属性
+
 
 
 
