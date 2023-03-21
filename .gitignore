@@ -1,3 +1,6 @@
 /.idea/
 /otel-javaagent-extensions/target/
 /otel-javaagent-extensions.iml
+/test/web/.mvn/wrapper/
+/test/web/mvnw
+/test/web/mvnw.cmd
