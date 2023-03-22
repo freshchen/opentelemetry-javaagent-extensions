@@ -4,6 +4,10 @@ import com.google.auto.service.AutoService;
 import io.opentelemetry.sdk.autoconfigure.spi.AutoConfigurationCustomizer;
 import io.opentelemetry.sdk.autoconfigure.spi.AutoConfigurationCustomizerProvider;
 
+import java.util.logging.Logger;
+
+import static java.util.logging.Level.INFO;
+
 /**
  * @author freshchen
  * @since 2023/3/22
@@ -11,8 +15,10 @@ import io.opentelemetry.sdk.autoconfigure.spi.AutoConfigurationCustomizerProvide
 @AutoService(AutoConfigurationCustomizerProvider.class)
 public class CustomProviderConfigurer implements AutoConfigurationCustomizerProvider {
 
+    private static final Logger logger = Logger.getLogger(CustomProviderConfigurer.class.getName());
+
     @Override
     public void customize(AutoConfigurationCustomizer autoConfigurationCustomizer) {
-        System.out.println("Opentelemetry CustomProviderConfigurer enabled");
+        logger.log(INFO, "Opentelemetry CustomProviderConfigurer enabled");
     }
 }

@@ -32,9 +32,17 @@ java -javaagent:/opentelemetry-javaagent.jar \
 目录下为扩展的核心代码，为了减少学习成本，没有和官方案例一样使用 gradle 而是使用了 maven，
 对扩展所需的依赖以及进行了管理，大家可以 `git clone` 下来按需进行改造，执行 `mvn clean package` 即可打包出扩展包
 
+扩展 Instrumentation 编写 Advice 类注意点:
+- Advice 当作是一段函数，不能当作一个类
+- 只能通过类似方法注入，防止被类加载 `this.getClass().getName() + "$CustomServlet3ServerHandlerAdvice";`
+- Advice 只能包含静态方法
+- Advice 除了参数外只能调用 opentelemetry-javaagent-extension-api 包里的类，其他任何方法和常量都不能访问
+
 **test 目录**
 
-目录下为一些测试案例
+目录下为一些测试案例，启动时记得添加 agent
+
+![idea](docs/img/idea.png)
 
 ## 定制化功能
 
