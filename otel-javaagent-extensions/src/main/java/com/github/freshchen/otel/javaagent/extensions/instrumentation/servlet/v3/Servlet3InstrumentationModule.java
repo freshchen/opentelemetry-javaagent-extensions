@@ -1,4 +1,4 @@
-package com.github.freshchen.otel.javaagent.extensions.instrumentation.servlet3;
+package com.github.freshchen.otel.javaagent.extensions.instrumentation.servlet.v3;
 
 import com.google.auto.service.AutoService;
 import io.opentelemetry.javaagent.extension.instrumentation.InstrumentationModule;
@@ -15,9 +15,9 @@ import static java.util.Collections.singletonList;
  * @since 2023/3/22
  */
 @AutoService(InstrumentationModule.class)
-public class CustomServlet3InstrumentationModule extends InstrumentationModule {
+public class Servlet3InstrumentationModule extends InstrumentationModule {
 
-    public CustomServlet3InstrumentationModule() {
+    public Servlet3InstrumentationModule() {
         super("custom-servlet", "servlet-3");
     }
 
@@ -28,7 +28,7 @@ public class CustomServlet3InstrumentationModule extends InstrumentationModule {
 
     @Override
     public List<TypeInstrumentation> typeInstrumentations() {
-        return singletonList(new CustomServlet3Instrumentation());
+        return singletonList(new Servlet3Instrumentation());
     }
 
     @Override

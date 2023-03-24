@@ -4,3 +4,8 @@
 /test/web/.mvn/wrapper/
 /test/web/mvnw
 /test/web/mvnw.cmd
+/test/gateway/.mvn/wrapper/
+/test/gateway/mvnw
+/test/gateway/mvnw.cmd
+/test/gateway/src/test/java/com/example/gateway/GatewayApplicationTests.java
+/test/gateway/.gitignore

@@ -20,6 +20,7 @@
         <opentelemetry-instrumentation-alpha.version>1.20.2-alpha</opentelemetry-instrumentation-alpha.version>
 
         <apollo-client.version>1.9.0</apollo-client.version>
+        <spring-webflux.version>5.0.0.RELEASE</spring-webflux.version>
         <xxl-job.version>2.3.0</xxl-job.version>
         <shardingsphere-jdbc.version>5.2.0</shardingsphere-jdbc.version>
         <auto-service.version>1.0.1</auto-service.version>
@@ -110,6 +111,12 @@
             <groupId>com.ctrip.framework.apollo</groupId>
             <artifactId>apollo-client</artifactId>
             <version>${apollo-client.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webflux</artifactId>
+            <version>${spring-webflux.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
