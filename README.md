@@ -1,7 +1,7 @@
 # opentelemetry-javaagent-extensions
 对 opentelemetry-java-instrumentation 的补充
 
-## 定制化功能
+## 扩展功能清单
 
 ### 1 扩展 web 响应头添加 trace id 以及跨度属性
 
