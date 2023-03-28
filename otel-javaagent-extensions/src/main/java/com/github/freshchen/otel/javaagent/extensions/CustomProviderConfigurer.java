@@ -1,5 +1,6 @@
 package com.github.freshchen.otel.javaagent.extensions;
 
+import com.github.freshchen.otel.javaagent.extensions.trace.TracerProviderCustomizer;
 import com.google.auto.service.AutoService;
 import io.opentelemetry.sdk.autoconfigure.spi.AutoConfigurationCustomizer;
 import io.opentelemetry.sdk.autoconfigure.spi.AutoConfigurationCustomizerProvider;
@@ -20,5 +21,8 @@ public class CustomProviderConfigurer implements AutoConfigurationCustomizerProv
     @Override
     public void customize(AutoConfigurationCustomizer autoConfigurationCustomizer) {
         logger.log(INFO, "Opentelemetry CustomProviderConfigurer enabled");
+        autoConfigurationCustomizer
+                .addTracerProviderCustomizer(TracerProviderCustomizer.INSTANCE);
     }
+
 }

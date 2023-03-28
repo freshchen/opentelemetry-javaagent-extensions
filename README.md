@@ -3,9 +3,16 @@
 
 ## 扩展功能清单
 
-### 1 扩展 web 响应头添加 trace id 以及跨度属性
+### 1 web 响应头添加 trace id
+
+支持 servlet & webflux
 
 https://juejin.cn/post/7213927327938936891
+
+
+### 2 丢弃不需要的跨度
+
+支持 指定属性值的正则匹配过滤
 
 
 ## Opentelemetry 简介

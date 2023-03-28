@@ -20,7 +20,7 @@ public class ResponseTraceIdAdvice {
 
         if (response instanceof HttpServletResponse) {
             String traceIdHeader = InstrumentationConfig.get()
-                    .getString("http.response.trace.id.header");
+                    .getString("http.response.trace.id.header", "tid");
             if (!StringUtils.isNullOrEmpty(traceIdHeader)) {
                 HttpServletResponse httpServletResponse = (HttpServletResponse) response;
                 if (!httpServletResponse.containsHeader(traceIdHeader)) {

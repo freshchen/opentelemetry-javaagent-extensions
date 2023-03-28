@@ -19,7 +19,7 @@ public class ResponseTraceIdAdvice {
             @Advice.Argument(0) ServerWebExchange exchange) {
 
         String traceIdHeader = InstrumentationConfig.get()
-                .getString("http.response.trace.id.header");
+                .getString("http.response.trace.id.header", "tid");
         if (!StringUtils.isNullOrEmpty(traceIdHeader)) {
             HttpHeaders headers = exchange.getResponse().getHeaders();
             if (!headers.containsKey(traceIdHeader)) {
